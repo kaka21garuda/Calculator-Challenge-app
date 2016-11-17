@@ -89,6 +89,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-       
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tableViewController: TableViewController = segue.destination as! TableViewController
+        tableViewController.viewControllerInstance = self
+    }
 }
 
